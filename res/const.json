@@ -1,0 +1,13 @@
+{
+  "channel-mapping": "res/mapping.json",
+  "command-prefix": [
+    "."
+  ],
+  "strings": {
+    "joined": ":inbox_tray: **{member}** joined **{channel}**.",
+    "left": ":outbox_tray: **{member}** left **{channel}**.",
+    "moved": ":twisted_rightwards_arrows: **{member}** moved from **{before_channel}** to **{after_channel}**.",
+    "no-text-channel": ":weary: Cannot find text channel.",
+    "text-channel-set-complete": ":white_check_mark: Notification channel for this server set to {text_channel}."
+  }
+}
