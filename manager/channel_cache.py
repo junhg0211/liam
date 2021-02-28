@@ -41,11 +41,12 @@ class DataManager:
         self.caches[guild.id] = channel_cache
         return text_channel
 
-    def set_channel(self, server_id: int, text_channel_id: int):
+    def set_channel(self, guild_id: int, text_channel_id: int):
         with open(self.json_path, 'r') as read_file:
             data = load(read_file)
-
-        data[server_id] = text_channel_id
-
+        data[guild_id] = text_channel_id
         with open(self.json_path, 'w') as write_file:
             dump(data, write_file)
+
+        if guild_id in self.caches:
+            del self.caches[guild_id]
